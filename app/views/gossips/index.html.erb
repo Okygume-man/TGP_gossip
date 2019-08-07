@@ -1,0 +1,11 @@
+    
+<h1>The gossip project</h1>
+	<p> Tu veux creer un potin?</p>
+	<a <%= link_to "Clique ici", new_gossip_path %> </a>
+
+
+		<p><% @gossips.each do |gossip| %>
+		
+De : <a <% link_to "#{gossip.user.first_name}", gossip_path(gossip.id)%>, <%= gossip.title %> </a> <br />
+<% end %></p>
+
